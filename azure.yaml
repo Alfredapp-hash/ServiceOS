@@ -1,0 +1,15 @@
+name: serviceos
+metadata:
+  template: serviceos-azure
+infra:
+  provider: bicep
+  path: infra
+services:
+  dashboard:
+    project: apps/dashboard
+    language: ts
+    host: containerapp
+  api:
+    project: apps/api
+    language: ts
+    host: containerapp
